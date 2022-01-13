@@ -61,7 +61,7 @@ variable "ecs_task_definition_memory" {
 variable "lb_name" {
   description = "Name for the load balancer"
   type        = string
-  default     = "wordpress1"
+  default     = "wordpress"
 }
 
 variable "lb_internal" {
@@ -133,7 +133,7 @@ variable "rds_cluster_backup_retention_period" {
 variable "rds_cluster_database_name" {
   description = "Name of the database to create"
   type        = string
-  default     = "wordpress1"
+  default     = "wordpress"
 }
 
 variable "rds_cluster_deletion_protection" {

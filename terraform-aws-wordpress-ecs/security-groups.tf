@@ -92,7 +92,7 @@ resource "aws_security_group_rule" "ecs_service_egress_efs_tcp" {
 
 resource "aws_security_group" "lb_service" {
   count       = length(var.security_group_ids.lb) == 0 ? 1 : 0
-  name        = "wordpress-lb-service1"
+  name        = "wordpress-lb-service"
   description = "wordpress lb service"
   vpc_id      = data.aws_subnet.ecs_service_subnet_ids.vpc_id
 }

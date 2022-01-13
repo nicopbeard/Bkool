@@ -12,7 +12,7 @@ resource "aws_kms_key" "wordpress" {
 }
 
 resource "aws_kms_alias" "wordpress" {
-  name          = "alias/wordpress1"
+  name          = "alias/wordpress-key"
   target_key_id = aws_kms_key.wordpress.id
 }
 

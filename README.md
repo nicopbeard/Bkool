@@ -14,7 +14,10 @@ Contains all the variables for the terraform script. Most of them are defaulted 
 Creates the proper security groups for the different parts of the program such as the ecs and rds cluster. These services need the correct inbound and outbound rules to allow for communication between the different services.
 
 # outputs.tf
-Contains the key identifiers of many of the resources used throughout the prorgram such as the kms key id, ecs task arn, and rds cluster endpoint.
+Contains the key identifiers of many of the resources used throughout the prorgram such as the kms key id, ecs task arn, and rds cluster endpoint. After a successful deployment, all the identifiers in the output.tf file will be outputted in the console.
+
+# providers.tf
+Contains the required providers for the application, which includes the aws and random providers. The aws provider contains the lifecycle management of AWS resources such as ECS, RDS, VPC, etc. The random provider allows the use of randomness within Terraform configurations so that resources can generate random values and hold onto those values until the inputs are changed. The database password was generated randomly, for example, which used the random provider.
 
 # wordpress.tpl
 Template file for the wordpress application, which contains the configuration for the application and helps put all the resources of the application together to create the final product. The configuration includes the environment, the mount points, and the necessary ports for the application to run.
