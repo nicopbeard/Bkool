@@ -1,3 +1,11 @@
+# Important Notes
+When deploying the terraform application, it's important to note that it won't be successful unless the relevant resources are first deleted so that they can be created again by this application. So for example, the security groups and clusters that get created must be deleted either within the AWS console or CLI before being able to deploy successfully.
+
+To run the application:
+
+terraform init
+terraform apply
+
 # main.tf:
 Contains the primary functionality for the terraform script. It instantiates the load balancer, rds cluster, the ecs cluster, IAM roles and policies, and secrets manager secret, among other resources.
 
