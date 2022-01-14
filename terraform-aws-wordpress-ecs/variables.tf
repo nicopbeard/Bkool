@@ -37,7 +37,7 @@ variable "ecs_service_subnet_ids" {
 variable "ecs_service_assign_public_ip" {
   description = "Whether to assign a public IP to the task ENIs"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "ecs_task_definition_family" {
