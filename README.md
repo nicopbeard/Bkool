@@ -1,5 +1,5 @@
 # Important Notes
-When deploying the terraform application, it's important to note that it won't be successful unless the relevant resources are first deleted so that they can be created again by this application. So for example, the security groups and clusters that get created must be deleted either within the AWS console or CLI before being able to deploy successfully.
+When deploying the terraform application, it's important to note that it won't be successful unless the relevant resources are first deleted so that they can be created again by this application using the "terraform destroy" command. So for example, the security groups and clusters that get created must be deleted either within the AWS console or CLI before being able to deploy successfully.
 
 To run the application:
 
